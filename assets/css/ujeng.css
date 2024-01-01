@@ -1,0 +1,44 @@
+#info{
+    display: flex;
+    flex-direction: column;
+}
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+
+}
+
+#contact-info{
+    display: flex;
+    flex-direction:row;
+    gap: 25px;
+}
+
+#info-content{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-info i{
+    font-size: 35px;
+}
+
+#info a{
+    color:black; 
+}
+#info a:hover{
+    color: #0563bb;
+}
+
+#education-profesional{
+    display: flex;
+    flex-direction: column;
+}
+
+#resume-all{
+    display: flex;
+    flex-direction: row;
+}
