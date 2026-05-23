@@ -598,6 +598,33 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.portfolio .portfolio-item.portfolio-hidden {
+  display: none !important;
+}
+
+.portfolio .portfolio-item.portfolio-leaving {
+  opacity: 0;
+  transform: translateY(14px) scale(0.97);
+  pointer-events: none;
+}
+
+.portfolio .portfolio-item.portfolio-entering {
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+}
+
+.portfolio .portfolio-item.portfolio-entering.portfolio-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio .portfolio-item {
+    transition: none;
+  }
 }
 
 .portfolio #portfolio-flters {
@@ -624,7 +651,7 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-appactive {
+.portfolio #portfolio-flters li.filter-active {
   color: #0563bb;
 }
 
